@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @wine_mart.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @wine_mart.category %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @wine_mart.industry %>
+</p>
+<td><%= link_to 'Create Wine Mart ', new_wine_mart_path %></td>
+<%= link_to 'Back', wine_mart_path %>

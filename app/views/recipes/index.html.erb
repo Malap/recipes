@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  Download:
+  <%= link_to "CSV", recipes_path(format: "csv") %> |
+  <%= link_to "Excel", recipes_path(format: "xls") %>
+</p>
+
+
+
+<h1>Recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.city %></td>
+        <td><%= recipe.address %></td>
+        <td><%= link_to 'Show', recipe %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path %>

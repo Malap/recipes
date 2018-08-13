@@ -1,0 +1,24 @@
+<h1> Creating New Wine Mart</h1>
+
+<% = form_for(@wine_mart) do |f| %>
+
+<div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= f.label :industry %>
+    <%= f.text_field :industry %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit  "create new Wine Mart"%>
+  </div>
+<% end %>
+

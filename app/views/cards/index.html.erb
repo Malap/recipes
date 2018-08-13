@@ -1,0 +1,28 @@
+<h1> Cards </h1>
+
+<table>
+	<thead>
+		<tr>
+		<th>name</th>
+		<th>category</th>
+		<th>industry</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @cards.each do |card| %>
+		<tr>
+			<td><%= card.name %></td>
+			<td><%= card.category %></td>
+			<td><%= card.industry %></td>
+			<td><%= link_to 'show', card_path(card) %></td>
+			<td><%= link_to 'edit', card_path(card) %></td>
+			<td><%= link_to 'Destroy', card,method: :delete,data: {confirm:'Are you sure?'} %></td>
+
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= link_to  "new card",new_card_path %>
+
+
+	

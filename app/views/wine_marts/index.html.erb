@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<h1>Wine Marts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Industry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wine_marts.each do |wine_mart| %>
+      <tr>
+        <td><%= wine_mart.name %></td>
+        <td><%= wine_mart.category %></td>
+        <td><%= wine_mart.industry %></td>
+        <td><%= link_to 'Show', wine_mart_path(wine_mart) %></td>
+        <td><%= link_to 'Edit', edit_wine_mart_path(wine_mart) %></td>
+        <td><%= link_to 'Destroy', wine_mart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<td><%= link_to 'Create Wine Mart', new_wine_mart_path %></td>

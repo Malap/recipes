@@ -1,0 +1,2 @@
+class Colleage < ApplicationController
+end

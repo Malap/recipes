@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+    
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String">Release Date</Data></Cell>
+        <Cell><Data ss:Type="String">Price</Data></Cell>
+      </Row>
+    <% @recipes.each do |recipe| %>
+      <Row>
+      
+        <Cell><Data ss:Type="String"><%= recipe.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= recipe.city%></Data></Cell>
+        <Cell><Data ss:Type="String"><%= recipe.address %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @colleage.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @colleage.city %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @colleage.address %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @colleage.phonenumber %>
+</p>
+
+<%= link_to 'Edit', edit_colleage_path(@colleage) %> |
+<%= link_to 'Back', colleages_path %>
