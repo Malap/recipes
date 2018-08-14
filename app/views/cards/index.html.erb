@@ -1,7 +1,7 @@
 <h1> Cards </h1>
 
 <table>
-	<thead>
+	<thead> 
 		<tr>
 		<th>name</th>
 		<th>category</th>
@@ -23,6 +23,16 @@
 	</tbody>
 </table>
 <%= link_to  "new card",new_card_path %>
+<p>
+<% link_to "rename_first_record", rename_first_record_card_path(Card.first) %>
+</p>
 
+<p>
+<% link_to "rename_second_record", rename_second_record_card_path(Card.find(2)) %>
+</p>
+
+<p>
+<% link_to "rename_first_ten_records", rename_first_ten_records_cards_path %>
+</p>
 
 	
