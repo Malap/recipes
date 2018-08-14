@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   resources :recipes
   resources :colleages
   resources :wine_marts
-  resources :cards
   get 'samples/get_sample'
   get 'samples/get_sample2'
   get 'samples/get_sample3'

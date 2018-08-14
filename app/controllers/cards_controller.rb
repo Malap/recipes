@@ -37,34 +37,33 @@ def create
       # format.json { head :no_content }
    
     end
-end
-     
-    private 
-      def card_params
-      	params.require(:card).permit(:name,:category,:industry)
-      end
-     
-end
-
-def rename_first_record
-    	@card = Card.find(params[:id])
-    	@card.name = "card updated  from member action"
-    	@card.save
-    	redirect_to cards_path
+  end
+    def rename_first_record
+      @card = Card.find(params[:id])
+      @card.name = "card updated  from member action"
+      @card.save
+      redirect_to cards_path
      end
      def rename_second_record
-     	@card = Card.find(params[:id])
-     	@card.name = "card updated from member action 2"
-     	@cards.save
-     	redirect_to cards_path
+      @card = Card.find(params[:id])
+      @card.name = "card updated from member action 2"
+      @cards.save
+      redirect_to cards_path
      end
      def rename_first_ten_records
-     	@cards = Card.first(10)
-     	@cards.each do |card|
+      @cards = Card.first(10)
+      @cards.each do |card|
         @card.name = "card updated member from member action venkey"
         @card.save
     end
      redirect_to cards_path
  end 
+     
+    private 
+      def card_params
+      	params.require(:card).permit(:name,:category,:industry)
+      end
 
+     
+end
 
