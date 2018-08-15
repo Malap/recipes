@@ -38,7 +38,15 @@ def create
    
     end
 end
-     def rename_first_record
+     
+    private 
+      def card_params
+      	params.require(:card).permit(:name,:category,:industry)
+      end
+     
+end
+
+def rename_first_record
     	@card = Card.find(params[:id])
     	@card.name = "card updated  from member action"
     	@card.save
@@ -59,10 +67,4 @@ end
      redirect_to cards_path
  end 
 
-    private 
-      def card_params
-      	params.require(:card).permit(:name,:category,:industry)
-      end
-     
-end
 
